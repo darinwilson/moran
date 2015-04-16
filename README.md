@@ -1,17 +1,15 @@
 # moran
 
-moran is a simple JSON parser and generator for [RubyMotion Android](http://rubymotion.com). It provides
-a Ruby wrapper around the [Jackson JSON parser for Java.](https://github.com/FasterXML/jackson)
+moran is a simple JSON parser and generator for [RubyMotion Android](http://rubymotion.com). It provides a Ruby wrapper around the [Jackson JSON parser for Java.](https://github.com/FasterXML/jackson)
 
-moran emulates the standard Ruby JSON API, providing `parse` and `generate` module methods:
+moran emulates the standard Ruby JSON API, providing `parse` and `generate` methods:
 
 ```ruby
 hash = Moran.parse(json_string)
 json_string = Moran.generate(hash)
 ```
 
-It also adds convenience methods to `Hash` for generating JSON, and converting `org.json.JSONObject`
-instances into Hashes, which is handy for integrating with some Java libraries that use them:
+It also adds convenience methods to `Hash` for generating JSON, and converting `org.json.JSONObject` instances into Hashes, which is handy for integrating with the Java libraries that use them:
 
 ```ruby
 json_string = hash.to_json
@@ -22,9 +20,7 @@ hash = Hash.from_json_object(some_json_object)
 
 ### Prerequisite
 
-This gem uses [motion-gradle](https://github.com/HipByte/motion-gradle) to manage the Java
-dependencies, so you need to have Gradle installed. For full details, see the
-[motion-gradle README](https://github.com/HipByte/motion-gradle), but the basics are:
+This gem uses [motion-gradle](https://github.com/HipByte/motion-gradle) to manage the Java dependencies, so you need to have Gradle installed. For full details, see the [motion-gradle README](https://github.com/HipByte/motion-gradle), but the basics are:
 
 ```shell
 brew install gradle
