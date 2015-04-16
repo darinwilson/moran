@@ -1,6 +1,6 @@
 # moran
 
-moran is a simple JSON parser and generator for [RubyMotion Android](http://rubymotion.com). It provides a Ruby wrapper around the [Jackson JSON parser for Java.](https://github.com/FasterXML/jackson)
+moran is a simple JSON parser and generator for [RubyMotion Android](http://rubymotion.com) named after the famous jazz pianist [Jason Moran](http://en.wikipedia.org/wiki/Jason_Moran_%28musician%29). It provides a Ruby wrapper around the [Jackson JSON parser for Java.](https://github.com/FasterXML/jackson)
 
 moran emulates the standard Ruby JSON API, providing `parse` and `generate` methods:
 
