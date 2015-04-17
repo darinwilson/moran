@@ -5,6 +5,7 @@ before_install:
   - sudo mkdir -p ~/Library/RubyMotion/build
   - sudo chown -R travis ~/Library/RubyMotion/build
   - sudo motion update
+  - sudo motion update
 before_script:
   - echo no | android create avd --force -n test -t android-19 --abi armeabi-v7a
   - emulator -avd test -no-skin -no-audio -no-window &
