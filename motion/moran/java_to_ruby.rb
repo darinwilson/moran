@@ -60,7 +60,6 @@ class JavaToRuby
   private
 
   def convert_value(value)
-    puts value.class
     new_value ||= hashmap_to_hash(value) if hashmap?(value)
     new_value ||= to_array(value)        if array?(value)
     new_value ||= to_boolean(value)      if boolean?(value)
