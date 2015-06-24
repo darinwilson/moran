@@ -13,7 +13,6 @@ end
 Motion::Project::App.setup do |app|
   # Use `rake config' to see complete project settings.
   app.name = "Moran"
-  app.api_version = "21"
   app.archs << "x86"
   app.main_activity = "MainActivity"
 end

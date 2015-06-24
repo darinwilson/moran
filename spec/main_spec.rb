@@ -21,11 +21,11 @@ describe "Moran" do
   it "can parse Array values" do
     json = '{ my_dog_has: ["fleas","bones","a loud bark"] }'
     hash = Moran.parse(json)
-   
+
     # Now, you'd think this next line would work, right? It doesn't, even when the values
     # are the same. Life on the bleeding edge... :'(
     #hash["my_dog_has"].should == ["fleas","bones","a loud bark"]
-    
+
     # So, we do it the hard way...
     arrays_are_equal?(hash["my_dog_has"], ["fleas","bones","a loud bark"]).should == true
   end
@@ -43,6 +43,13 @@ describe "Moran" do
     nested = hash["dog"]["fleas"]
     nested["count"].should == 12
     nested["severity"].should == "moderate"
+  end
+
+  it "can parse a large file in a reasonable amount of time" do
+    start_time = Time.now
+    hash = Moran.parse(LargeJson::JSON_STRING)
+    end_time = Time.now
+    (end_time - start_time).should.satisfy { |parse_time| parse_time < 1.0 }
   end
 
   it "can generate String values" do
@@ -74,7 +81,7 @@ describe "Moran" do
 
     # this won't work - see comment in "can parse Array values"
     #new_hash["my_dog_has"].should == ["fleas","bones","a loud bark"]
-    arrays_are_equal?(new_hash["my_dog_has"], ary).should == true 
+    arrays_are_equal?(new_hash["my_dog_has"], ary).should == true
   end
 
   it "can generate Hash values" do
@@ -128,5 +135,5 @@ describe "Moran" do
     end
     true
   end
-  
+
 end
