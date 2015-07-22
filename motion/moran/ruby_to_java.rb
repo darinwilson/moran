@@ -3,7 +3,11 @@
 class RubyToJava
 
   def self.convert_hash(hash)
-    RubyToJava.new.to_hashmap(hash)    
+    RubyToJava.new.to_hashmap(hash)
+  end
+
+  def self.convert_array(array)
+    RubyToJava.new.to_array(array)
   end
 
   def to_hashmap(old_hash)
@@ -14,17 +18,17 @@ class RubyToJava
     end
   end
 
+  def to_array(array)
+    array.map { |v| v.is_a?(String) ? v.toString : v }
+  end
+
   private
 
   def convert_value(value)
-    new_value ||= to_hashmap(value)     if value.is_a?(Hash)
-    new_value ||= convert_array(value)  if value.is_a?(Array)
-    new_value ||= value.toString        if value.is_a?(String)
+    new_value ||= to_hashmap(value) if value.is_a?(Hash)
+    new_value ||= to_array(value)   if value.is_a?(Array)
+    new_value ||= value.toString    if value.is_a?(String)
     new_value ||= value
-  end
-
-  def convert_array(array)
-    array.map { |v| v.is_a?(String) ? v.toString : v }
   end
 
 end

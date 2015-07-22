@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    moran (0.0.2)
+    moran (0.5)
       motion-gradle
 
 GEM

@@ -45,6 +45,12 @@ describe "Moran" do
     nested["severity"].should == "moderate"
   end
 
+  it "can parse JSON that is just an array" do
+    json = '[ "my", "dog", "has", "fleas" ]'
+    array = Moran.parse(json)
+    arrays_are_equal?(array, [ "my", "dog", "has", "fleas"]).should == true
+  end
+
   it "can parse a large file in a reasonable amount of time" do
     start_time = Time.now
     hash = Moran.parse(LargeJson::JSON_STRING)
@@ -99,6 +105,13 @@ describe "Moran" do
     nested = new_hash["dog"]["fleas"]
     nested["count"].should == 12
     nested["severity"].should == "moderate"
+  end
+
+  it "can generate a JSON Array" do
+    array = [ "my", "dog", "has", "fleas" ]
+    json = Moran.generate(array)
+    new_array = Moran.parse(json)
+    arrays_are_equal?(new_array, array).should == true
   end
 
   it "can add to_json to a Hash" do
