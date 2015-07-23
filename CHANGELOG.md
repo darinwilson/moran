@@ -1,3 +1,7 @@
+0.6
+---
+* [Add support for JSON strings that are arrays, not objects](https://github.com/darinwilson/moran/commit/d00ca974143cb2d7fe2aab1dae9af0e932e14282) ([#5](https://github.com/darinwilson/moran/issues/5))
+
 0.5
 ---
 * [Remove now-unnecessary HashMap-to-Ruby-Hash conversion when parsing, resulting in a much-needed performance boost when parsing large JSON Strings](https://github.com/darinwilson/moran/commit/01a49e2c4a8ab182847a62db5103818330c58b1c) ([#4](https://github.com/darinwilson/moran/issues/4))
