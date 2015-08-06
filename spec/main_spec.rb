@@ -107,6 +107,16 @@ describe "Moran" do
     nested["severity"].should == "moderate"
   end
 
+  it "can generate nested Hashes inside Arrays" do
+    hash = { dogs: [{ name: "Rex", fleas: { count: 12, severity: "moderate" } }] }
+    json = Moran.generate(hash)
+    new_hash = Moran.parse(json)
+    nested = new_hash["dogs"][0]
+    nested["name"].should == "Rex"
+    nested["fleas"]["count"].should == 12
+    nested["fleas"]["severity"].should == "moderate"
+  end
+
   it "can generate a JSON Array" do
     array = [ "my", "dog", "has", "fleas" ]
     json = Moran.generate(array)
