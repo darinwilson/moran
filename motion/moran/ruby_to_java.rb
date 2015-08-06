@@ -19,7 +19,7 @@ class RubyToJava
   end
 
   def to_array(array)
-    array.map { |v| v.is_a?(String) ? v.toString : v }
+    array.map { |v| convert_value(v) }
   end
 
   private
