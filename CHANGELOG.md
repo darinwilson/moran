@@ -1,3 +1,7 @@
+0.6.5
+----
+* [Fix problem with converting Strings in nested data structures](https://github.com/darinwilson/moran/commit/8d57b87c823ae42a227fe15d43e6cbb4496d7fe1) ([skellock](https://github.com/skellock))
+
 0.6
 ---
 * [Add support for JSON strings that are arrays, not objects](https://github.com/darinwilson/moran/commit/d00ca974143cb2d7fe2aab1dae9af0e932e14282) ([#5](https://github.com/darinwilson/moran/issues/5))
