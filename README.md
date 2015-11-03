@@ -42,6 +42,10 @@ Install Gradle dependencies:
 rake gradle:install
 ```
 
+#### IMPORTANT NOTE ON motion-gradle COMPATIBILITY
+
+Earlier versions of motion-gradle used a syntax that is no longer supported as of version 2.0. If you need to use a pre-2.0 version of motion-gradle, you should use version 0.7 of moran - this is the last version that works with pre-2.0 motion-gradle.
+
 ## Usage
 
 ### Parsing

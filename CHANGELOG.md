@@ -1,3 +1,11 @@
+0.8
+----
+* [Switch to motion-gradle 2.0](https://github.com/darinwilson/moran/commit/e3bdd0f2861283e61e4756e522f6ff1555136be2)
+
+0.7
+----
+* [Freeze dependency on motion-gradle to an older version that still supports the old syntax](https://github.com/darinwilson/moran/commit/3fb47b9fe180eb9181ed2a5a64874b476cfaad35)
+
 0.6.5
 ----
 * [Fix problem with converting Strings in nested data structures](https://github.com/darinwilson/moran/commit/8d57b87c823ae42a227fe15d43e6cbb4496d7fe1) ([skellock](https://github.com/skellock))
