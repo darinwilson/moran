@@ -12,8 +12,8 @@ Motion::Project::App.setup do |app|
   app.files.unshift files
 
   app.gradle do
-    dependency "com.fasterxml.jackson.core", artifact: "jackson-core"
-    dependency "com.fasterxml.jackson.core", artifact: "jackson-annotations"
-    dependency "com.fasterxml.jackson.core", artifact: "jackson-databind"
+    dependency "com.fasterxml.jackson.core:jackson-core"
+    dependency "com.fasterxml.jackson.core:jackson-annotations"
+    dependency "com.fasterxml.jackson.core:jackson-databind"
   end
 end
