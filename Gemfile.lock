@@ -2,13 +2,13 @@ PATH
   remote: .
   specs:
     moran (0.6.5)
-      motion-gradle
+      motion-gradle (~> 1.6.0)
 
 GEM
   remote: https://rubygems.org/
   specs:
     bacon (1.2.0)
-    motion-gradle (1.0.3)
+    motion-gradle (1.6.0)
     rake (10.4.2)
 
 PLATFORMS
@@ -19,3 +19,6 @@ DEPENDENCIES
   moran!
   motion-gradle
   rake
+
+BUNDLED WITH
+   1.10.6

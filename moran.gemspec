@@ -6,7 +6,7 @@ require "moran/version"
 Gem::Specification.new do |spec|
   spec.name = "moran"
   spec.summary = "Simple JSON parsing and generation for RubyMotion Android"
-  spec.description = "Moran is a simple JSON parser/outputter for RubyMotion Android" 
+  spec.description = "Moran is a simple JSON parser/outputter for RubyMotion Android"
   spec.authors = ["Darin Wilson"]
   spec.email = "darinwilson@gmail.com"
   spec.homepage = "http://github.com/darinwilson/moran"
@@ -23,7 +23,7 @@ Gem::Specification.new do |spec|
   spec.test_files = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "motion-gradle"
+  spec.add_dependency "motion-gradle", "~> 1.6.0"
   spec.add_development_dependency "bacon"
   spec.add_development_dependency "rake"
 end
